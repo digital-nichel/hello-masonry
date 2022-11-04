@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    background: #eceff1;
+}
+
+.grid {}
+
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.gutter-sizer {
+    width: 1%;
+}
+
+.grid-sizer,
+.grid-item {
+    /* width: (100% - (col - 1)% * gutter-sizer.width) / col */
+    width: calc((100% - 3%) / 4);
+    margin-bottom: 1%;
+}
+
+.grid-item-cover {
+    width: 100%;
+}
+
+.grid-item-important {
+    width: calc((100% - 1%) / 2);
+}
+
+.grid-item img {
+    border: 2px solid #607d8b;
+    float: left;
+    border-radius: 16px;
+    display: block;
+    width: 100%;
+}
